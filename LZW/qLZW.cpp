@@ -1,4 +1,4 @@
-#include "qImpl.h"
+#include "QLZW.h"
 
 #include <string>
 #include <vector>

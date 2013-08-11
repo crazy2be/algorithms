@@ -1,4 +1,4 @@
-#include "qImpl.h"
+#include "QBWT.h"
 
 #include <string>
 #include <cstring>

@@ -61,19 +61,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\BWT\interface.h" />
-    <ClInclude Include="..\..\BWT\qImpl.h" />
+    <ClInclude Include="..\..\BWT\QBWT.h" />
     <ClInclude Include="..\..\BWT\tests.h" />
     <ClInclude Include="..\..\containerHelpers.h" />
     <ClInclude Include="..\..\DASSERT.h" />
+    <ClInclude Include="..\..\KMP\KMP.h" />
+    <ClInclude Include="..\..\KMP\QKMP.h" />
+    <ClInclude Include="..\..\KMP\tests.h" />
     <ClInclude Include="..\..\LZW\justin.h" />
     <ClInclude Include="..\..\LZW\LZW.h" />
-    <ClInclude Include="..\..\LZW\qImpl.h" />
+    <ClInclude Include="..\..\LZW\QLZW.h" />
     <ClInclude Include="..\..\LZW\tests.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\BWT\qBWT.cpp" />
-    <ClCompile Include="..\..\LZW\main.cpp" />
-    <ClCompile Include="..\..\LZW\qLZW.cpp" />
+    <ClCompile Include="..\..\BWT\QBWT.cpp" />
+    <ClCompile Include="..\..\KMP\main.cpp" />
+    <ClCompile Include="..\..\KMP\QKMP.cpp" />
+    <ClCompile Include="..\..\LZW\QLZW.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

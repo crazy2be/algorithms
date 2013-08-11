@@ -19,11 +19,8 @@
     <Filter Include="Header Files\LZW">
       <UniqueIdentifier>{2e6fbeeb-b109-4b16-b449-5c8d26eb7787}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\BWT">
-      <UniqueIdentifier>{3f2bd06c-dbe2-4ccf-b0e6-7d22f87f800c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\LZW">
-      <UniqueIdentifier>{784505de-4111-47ed-adb7-776aad6f852f}</UniqueIdentifier>
+    <Filter Include="Header Files\KMP">
+      <UniqueIdentifier>{6199b5d0-d7c3-4b63-9f33-513cea3447f2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -31,9 +28,6 @@
       <Filter>Header Files\BWT</Filter>
     </ClInclude>
     <ClInclude Include="..\..\BWT\interface.h">
-      <Filter>Header Files\BWT</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\BWT\qImpl.h">
       <Filter>Header Files\BWT</Filter>
     </ClInclude>
     <ClInclude Include="..\..\LZW\LZW.h">
@@ -45,25 +39,40 @@
     <ClInclude Include="..\..\DASSERT.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\LZW\qImpl.h">
-      <Filter>Header Files\LZW</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\LZW\justin.h">
       <Filter>Header Files\LZW</Filter>
     </ClInclude>
     <ClInclude Include="..\..\containerHelpers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\KMP\KMP.h">
+      <Filter>Header Files\KMP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\KMP\QKMP.h">
+      <Filter>Header Files\KMP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\KMP\tests.h">
+      <Filter>Header Files\KMP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BWT\QBWT.h">
+      <Filter>Header Files\BWT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LZW\QLZW.h">
+      <Filter>Header Files\LZW</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\LZW\main.cpp">
+    <ClCompile Include="..\..\BWT\QBWT.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\LZW\qLZW.cpp">
-      <Filter>Source Files\LZW</Filter>
+    <ClCompile Include="..\..\LZW\QLZW.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\BWT\qBWT.cpp">
-      <Filter>Source Files\BWT</Filter>
+    <ClCompile Include="..\..\KMP\QKMP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\KMP\main.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
