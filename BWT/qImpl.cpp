@@ -39,6 +39,9 @@ struct CharTuple
 
 string QBWT::Compress(string text)
 {
+    //Last char
+    text += "~";
+
     //Keep track of indicies of characters
     vector<CharTuple> chIndices;
     for(int ix = text.length() - 1; ix >= 0; ix--)
@@ -62,25 +65,27 @@ string QBWT::Decompress(string text)
 {
     //Keep track of indicies of characters
     vector<CharTuple> chIndices;
-    for(int ix = text.length() - 1; ix >= 0; ix--)
+    for(int ix = 0; ix < text.length(); ix++)
     {
-        CharTuple chTuple = {text[ix], ix, text};
+        string tempText;
+        tempText += text[ix];
+        CharTuple chTuple = {text[ix], ix, tempText};
         chIndices.push_back(chTuple);
     }
 
     stable_sort(chIndices.begin(), chIndices.end());
 
-    //Get where the first char got sorted to.
-    
-    int curIndex = 0;
-    while(chIndices[curIndex].index != text.length() - 1) curIndex++;
+    //The last character is just a sentinel
+    int curIndex = text.length() - 1;
 
     string realText;
 
-    while(realText.length() != text.length())
+    while(true)
     {
-        realText += text[curIndex];
         curIndex = chIndices[curIndex].index;
+        if(curIndex == text.length() - 1) //Kinda sloppy
+            break;
+        realText += chIndices[curIndex].ch;
     }
 
     return realText;

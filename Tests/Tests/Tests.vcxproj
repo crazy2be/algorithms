@@ -62,8 +62,11 @@
   <ItemGroup>
     <ClInclude Include="..\..\BWT\interface.h" />
     <ClInclude Include="..\..\BWT\qImpl.h" />
+    <ClInclude Include="..\..\BWT\tests.h" />
+    <ClInclude Include="..\..\DASSERT.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\BWT\main.cpp" />
     <ClCompile Include="..\..\BWT\qImpl.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
