@@ -13,4 +13,9 @@ void TestKMP(IKMP* kmp)
     matches = kmp->Matches("ababa", "aba");
     DASSERT(matches[0] == 0);
     DASSERT(matches[1] == 2);
+
+    //This tests your failure array creation, the very last a fails only once, so the failure array ends in 4, 2.
+    matches = kmp->Matches("aababaabaababaabaa", "aababaabaa");
+    DASSERT(matches[0] == 0);
+    DASSERT(matches[1] == 8);
 }
