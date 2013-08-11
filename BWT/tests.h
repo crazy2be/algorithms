@@ -2,7 +2,16 @@
 
 #include "qImpl.h"
 
-void TestBWT()
+#include <string>
+
+void GenStringsRandom()
 {
 
+}
+
+void TestBWT()
+{
+    QBWT q;
+    std::string result = q.Compress("BANANA");
+    std::string banana = q.Decompress(result);
 }

@@ -5,6 +5,6 @@
 class QBWT : public IBWT
 {
 public:
-    std::string Compress(std::string);
-    std::string Decompress(std::string);
+    std::string Compress(std::string) override;
+    std::string Decompress(std::string) override;
 };
