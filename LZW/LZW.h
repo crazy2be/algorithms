@@ -1,14 +1,5 @@
 #pragma once
-#include <string>
-#include <map>
-#include <vector>
-#include <iostream>
-
-using std::string;
-using std::map;
-using std::vector;
-using std::cout;
-using std::endl;
+#include "../util/inclues.h"
 
 class LZW {
 public:
