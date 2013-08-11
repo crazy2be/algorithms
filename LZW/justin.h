@@ -1,15 +1,13 @@
-#include "LZ.h"
-
 struct table {
 	table() {
-		int code = 0;
-		for (; code < 128; code++) {
-			table[code] = code;
+		topCode = 0;
+		for (; topCode < 128; topCode++) {
+			mapping[topCode] = topCode;
 		}
 	}
 	int find(string coded) {
 		for (int i = 0; i < 256; i++) {
-			if (table[i] == coded) {
+			if (mapping[i] == coded) {
 				return i;
 			}
 		}
@@ -19,7 +17,7 @@ struct table {
 		int i = 0;
 		int code = -1;
 		for (int i = 0; i < input.size(); i++) {
-			int longerCode = find(input.substr(0, i + 1))
+			int longerCode = find(input.substr(0, i + 1));
 			if (longerCode == -1) {
 				break;
 			}
@@ -28,29 +26,45 @@ struct table {
 		return code;
 	}
 	string lookup(int code) {
-		if (i < 0 || i >= 256) {
-			return ""
+		if (code < 0 || code >= 256) {
+			return "";
 		}
-		return table[code];
+		return mapping[code];
 	}
-	string table[256];
+	void add(string str) {
+		mapping[topCode] = str;
+		topCode++;
+	}
+	int topCode;
+	string mapping[256];
 };
 
 class JustinLZW : public LZW {
 public:
-	JustinLZW();
-	virtual ~JustinLZW();
-	virtual vector<char> encode(string input) {
-		encoded vector<char>;
+	JustinLZW() {}
+	virtual ~JustinLZW() {}
+	virtual vector<int> encode(string input) {
+		vector<int> encoded;
 		table table;
 		string prev = "";
-		for (int i = 0; i < input.size(); i++) {
-			string coded = table.findLargest(input.substr(i, string::npos));
-			vector.push_back(table.encode())
+		int offset = 0;
+		while (offset < input.size()) {
+
+			int coded = table.findLargest(input.substr(offset, string::npos));
+			encoded.push_back(coded);
+
+			string str = table.lookup(coded);
+
+			if (offset > 0) {
+				table.add(prev + str.substr(0, 1));
+			}
+			prev = str;
+
+			offset += str.size();
 		}
-		return input;
+		return encoded;
 	}
-	virtual string decode(string input) {
-		return input;
+	virtual string decode(vector<int> input) {
+		return "not implemented";
 	}
 };
