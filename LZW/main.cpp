@@ -1,5 +1,12 @@
 #include "tests.h"
 
+#include "justin.h"
+#include "qImpl.h"
+
 int main() {
-	TestLZW();
+    JustinLZW jLZW;
+	TestLZW(&jLZW);
+
+    QLZW qLZW;
+	TestLZW(&qLZW);
 }

@@ -63,11 +63,17 @@
     <ClInclude Include="..\..\BWT\interface.h" />
     <ClInclude Include="..\..\BWT\qImpl.h" />
     <ClInclude Include="..\..\BWT\tests.h" />
+    <ClInclude Include="..\..\containerHelpers.h" />
     <ClInclude Include="..\..\DASSERT.h" />
+    <ClInclude Include="..\..\LZW\justin.h" />
+    <ClInclude Include="..\..\LZW\LZW.h" />
+    <ClInclude Include="..\..\LZW\qImpl.h" />
+    <ClInclude Include="..\..\LZW\tests.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\BWT\main.cpp" />
-    <ClCompile Include="..\..\BWT\qImpl.cpp" />
+    <ClCompile Include="..\..\BWT\qBWT.cpp" />
+    <ClCompile Include="..\..\LZW\main.cpp" />
+    <ClCompile Include="..\..\LZW\qLZW.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
