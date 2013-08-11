@@ -21,9 +21,18 @@
     <ClInclude Include="..\..\BWT\qImpl.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\BWT\tests.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\DASSERT.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\BWT\qImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\BWT\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
