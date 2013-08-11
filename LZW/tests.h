@@ -1,13 +1,7 @@
+#include "../util/tests.h"
+
 #include "LZW.h"
 #include "justin.h"
-#include <cassert>
-
-#define MUST_EQUAL(expected, result) \
-	if (expected != result) { \
-		std::cout << "ERROR: Expected " << endl << expected \
-			<< endl << " got " << endl << result << endl; \
-		return; \
-	}
 
 void TestLZW()
 {
