@@ -44,27 +44,37 @@ public:
 	JustinLZW() {}
 	virtual ~JustinLZW() {}
 	virtual vector<int> encode(string input) {
-		vector<int> encoded;
 		table table;
+		vector<int> encoded;
 		string prev = "";
 		int offset = 0;
 		while (offset < input.size()) {
+			string remaining = input.substr(offset, string::npos);
+			int code = table.findLargest(remaining);
+			encoded.push_back(code);
 
-			int coded = table.findLargest(input.substr(offset, string::npos));
-			encoded.push_back(coded);
-
-			string str = table.lookup(coded);
-
+			string str = table.lookup(code);
 			if (offset > 0) {
 				table.add(prev + str.substr(0, 1));
 			}
 			prev = str;
-
 			offset += str.size();
 		}
 		return encoded;
 	}
 	virtual string decode(vector<int> input) {
-		return "not implemented";
+		table table;
+		string decoded;
+		string prev = "";
+		for (int i = 0; i < input.size(); i++) {
+			int code = input[i];
+			string str = table.lookup(code);
+			if (i > 0) {
+				table.add(prev + str.substr(0, 1));
+			}
+			prev = str;
+			decoded += str;
+		}
+		return decoded;
 	}
 };
