@@ -5,9 +5,9 @@ struct table {
 			mapping[topCode] = topCode;
 		}
 	}
-	int find(string coded) {
-		for (int i = 0; i < 256; i++) {
-			if (mapping[i] == coded) {
+	int find(string str) {
+		for (int i = 0; i < topCode; i++) {
+			if (mapping[i] == str) {
 				return i;
 			}
 		}
@@ -26,7 +26,7 @@ struct table {
 		return code;
 	}
 	string lookup(int code) {
-		if (code < 0 || code >= 256) {
+		if (code < 0 || code >= MAX_CODE) {
 			return "";
 		}
 		return mapping[code];
@@ -35,6 +35,9 @@ struct table {
 		mapping[topCode] = str;
 		topCode++;
 	}
+
+private:
+	static const int MAX_CODE = 256;
 	int topCode;
 	string mapping[256];
 };
@@ -51,13 +54,14 @@ public:
 		while (offset < input.size()) {
 			string remaining = input.substr(offset, string::npos);
 			int code = table.findLargest(remaining);
-			encoded.push_back(code);
 
 			string str = table.lookup(code);
 			if (offset > 0) {
 				table.add(prev + str.substr(0, 1));
 			}
 			prev = str;
+
+			encoded.push_back(code);
 			offset += str.size();
 		}
 		return encoded;
