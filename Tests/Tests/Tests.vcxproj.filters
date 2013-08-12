@@ -22,6 +22,12 @@
     <Filter Include="Header Files\KMP">
       <UniqueIdentifier>{6199b5d0-d7c3-4b63-9f33-513cea3447f2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\BM">
+      <UniqueIdentifier>{1eb88219-f067-4528-8205-2089133a5096}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ExtHash">
+      <UniqueIdentifier>{ad1d0917-5028-4fd7-82f9-80c40642c9b6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\BWT\tests.h">
@@ -60,6 +66,27 @@
     <ClInclude Include="..\..\LZW\QLZW.h">
       <Filter>Header Files\LZW</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\BM\BM.h">
+      <Filter>Header Files\BM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BM\QBM.h">
+      <Filter>Header Files\BM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BM\tests.h">
+      <Filter>Header Files\BM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\testHelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ExtendibleHashing\ExtendibleHashing.h">
+      <Filter>Header Files\ExtHash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ExtendibleHashing\QExtHash.h">
+      <Filter>Header Files\ExtHash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ExtendibleHashing\tests.h">
+      <Filter>Header Files\ExtHash</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\BWT\QBWT.cpp">
@@ -71,7 +98,13 @@
     <ClCompile Include="..\..\KMP\QKMP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\KMP\main.cpp">
+    <ClCompile Include="..\..\BM\QBM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ExtendibleHashing\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ExtendibleHashing\QExtHash.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
