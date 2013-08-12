@@ -1,7 +1,7 @@
 #include "tests.h"
 
 #include "justin.h"
-#include "qImpl.h"
+#include "QLZW.h"
 
 int main() {
     JustinLZW jLZW;

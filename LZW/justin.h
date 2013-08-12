@@ -49,20 +49,18 @@ public:
 	virtual vector<int> encode(string input) {
 		table table;
 		vector<int> encoded;
-		string prev = "";
 		int offset = 0;
 		while (offset < input.size()) {
 			string remaining = input.substr(offset, string::npos);
 			int code = table.findLargest(remaining);
 
-			string str = table.lookup(code);
-			if (offset > 0) {
-				table.add(prev + str.substr(0, 1));
-			}
-			prev = str;
-
 			encoded.push_back(code);
-			offset += str.size();
+			string coded = table.lookup(code);
+			offset += coded.size();
+
+			if (offset > 0) {
+				table.add(coded + input[offset]);
+			}
 		}
 		return encoded;
 	}

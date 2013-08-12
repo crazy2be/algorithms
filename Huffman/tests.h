@@ -22,7 +22,7 @@ void TestHuffman(Huffman& huffman) {
 		new HuffmanTree(
 			new HuffmanTree(
 				new HuffmanTree('E'),
-				new HuffmanTree('0')
+				new HuffmanTree('O')
 			),
 			new HuffmanTree('L')
 		),

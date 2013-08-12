@@ -14,4 +14,6 @@ void TestLZW(LZW* lzw)
 
 	string result2 = lzw->decode(output);
 	MUST_EQUAL(input, result2);
+
+	cout << lzw->encode("ababbaabbbaaaba") << endl;
 }

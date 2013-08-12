@@ -3,6 +3,10 @@
 #include "justin.h"
 
 int main() {
-	JustinHuffman jHuffman;
-	TestHuffman(jHuffman);
+	try {
+		JustinHuffman jHuffman;
+		TestHuffman(jHuffman);
+	} catch (string& err) {
+		cout << "FATAL ERROR: " << err << endl;
+	}
 }
