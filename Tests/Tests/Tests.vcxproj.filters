@@ -72,6 +72,9 @@
     <ClInclude Include="..\..\BM\tests.h">
       <Filter>Header Files\BM</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\testHelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\BWT\QBWT.cpp">

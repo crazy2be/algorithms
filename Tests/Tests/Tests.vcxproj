@@ -75,6 +75,7 @@
     <ClInclude Include="..\..\LZW\LZW.h" />
     <ClInclude Include="..\..\LZW\QLZW.h" />
     <ClInclude Include="..\..\LZW\tests.h" />
+    <ClInclude Include="..\..\testHelpers.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\BM\main.cpp" />

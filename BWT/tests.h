@@ -8,38 +8,7 @@
 
 #include "../DASSERT.h"
 
-int random(int min, int max)
-{
-    return rand() % (max - min) + min;
-}
-
-std::string GenStringRandom()
-{
-    std::vector<char> fullAlphabet;
-    for(int ix = 33; ix < 126; ix++)
-        fullAlphabet.push_back((char)ix);
-
-    int alphabetSize = random(2, fullAlphabet.size());
-    std::vector<char> alphabet;
-
-    while(alphabetSize --> 0)
-    {
-        int iFullAlpha = random(0, fullAlphabet.size());
-        char ch = fullAlphabet[iFullAlpha];
-        fullAlphabet.erase(fullAlphabet.begin() + iFullAlpha);
-        alphabet.push_back(ch);
-    }
-
-    std::string randString;
-
-    int stringSize = random(2, 100);
-    while(stringSize --> 0)
-    {
-        randString += alphabet[random(0, alphabet.size())];
-    }
-
-    return randString;
-}
+#include "../testHelpers.h"
 
 void TestBWT(IBWT* bwt)
 {

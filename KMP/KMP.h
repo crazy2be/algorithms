@@ -3,9 +3,13 @@
 #include <vector>
 #include <string>
 
-class IKMP
+class IFindMatches
 {
 public:
-    virtual ~IKMP() { }
+    virtual ~IFindMatches() { }
     virtual std::vector<int> Matches(std::string text, std::string pattern) = 0;
+};
+
+class IKMP : public IFindMatches
+{
 };

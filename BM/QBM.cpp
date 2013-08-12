@@ -26,6 +26,7 @@ vector<int> QBM::Matches(string text, string pattern)
         //text[ix] != text[iy]
         int iy = ix - 1;
         int match = ix - pattern.size() + 2;
+        if(match >= 0) match = -1;
         while(iy >= -1)
         {
             while(iy >= 0 && pattern[iy] == pattern[ix])
