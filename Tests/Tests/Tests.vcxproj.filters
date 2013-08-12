@@ -22,6 +22,9 @@
     <Filter Include="Header Files\KMP">
       <UniqueIdentifier>{6199b5d0-d7c3-4b63-9f33-513cea3447f2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\BM">
+      <UniqueIdentifier>{1eb88219-f067-4528-8205-2089133a5096}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\BWT\tests.h">
@@ -60,6 +63,15 @@
     <ClInclude Include="..\..\LZW\QLZW.h">
       <Filter>Header Files\LZW</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\BM\BM.h">
+      <Filter>Header Files\BM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BM\QBM.h">
+      <Filter>Header Files\BM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BM\tests.h">
+      <Filter>Header Files\BM</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\BWT\QBWT.cpp">
@@ -71,7 +83,10 @@
     <ClCompile Include="..\..\KMP\QKMP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\KMP\main.cpp">
+    <ClCompile Include="..\..\BM\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\BM\QBM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
