@@ -41,15 +41,15 @@ vector<int> QKMP::Matches(string text, string pattern)
         }
         else
         {
-            //Ugh... we need to test this char again
-            bool recheckChar = matchPos > 0;
+            if(matchPos == 0)
+                continue;
 
             //Follow failure array until it matches
             while(matchPos > 0 && text[textPos] != pattern[matchPos])
                 matchPos = F[matchPos - 1];
 
-            if(recheckChar)
-                textPos--;
+            //Ugh... we need to test this char again
+            textPos--;
         }
     }
 

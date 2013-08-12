@@ -68,6 +68,9 @@
     <ClInclude Include="..\..\BWT\tests.h" />
     <ClInclude Include="..\..\containerHelpers.h" />
     <ClInclude Include="..\..\DASSERT.h" />
+    <ClInclude Include="..\..\ExtendibleHashing\ExtendibleHashing.h" />
+    <ClInclude Include="..\..\ExtendibleHashing\QExtHash.h" />
+    <ClInclude Include="..\..\ExtendibleHashing\tests.h" />
     <ClInclude Include="..\..\KMP\KMP.h" />
     <ClInclude Include="..\..\KMP\QKMP.h" />
     <ClInclude Include="..\..\KMP\tests.h" />
@@ -78,9 +81,10 @@
     <ClInclude Include="..\..\testHelpers.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\BM\main.cpp" />
     <ClCompile Include="..\..\BM\QBM.cpp" />
     <ClCompile Include="..\..\BWT\QBWT.cpp" />
+    <ClCompile Include="..\..\ExtendibleHashing\main.cpp" />
+    <ClCompile Include="..\..\ExtendibleHashing\QExtHash.cpp" />
     <ClCompile Include="..\..\KMP\QKMP.cpp" />
     <ClCompile Include="..\..\LZW\QLZW.cpp" />
   </ItemGroup>

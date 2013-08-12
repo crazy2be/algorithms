@@ -56,30 +56,30 @@ vector<int> QBM::Matches(string text, string pattern)
         S.push_back(match);
     }
 
-    int m = pattern.size();
+    int patSize = pattern.size();
     int n = text.size();
 
-    int i = m - 1;
-    int j = m - 1;
+    int iText = patSize - 1;
+    int iPattern = patSize - 1;
 
     vector<int> matches;
 
-    while(i < n && j >= 0)
+    while(iText < n && iPattern >= 0)
     {
-        if(text[i] == pattern[j])
+        if(text[iText] == pattern[iPattern])
         {
-            if(j > 0)
+            if(iPattern > 0)
             {
-                i--;
-                j--;
+                iText--;
+                iPattern--;
                 continue;
             }
             //A full match, so we just record it then pretend its a failure
-            matches.push_back(i);
+            matches.push_back(iText);
         }
 
-        i = i + m - 1 - min(L[text[i]], S[j]);
-        j = m - 1;
+        iText = iText + patSize - 1 - min(L[text[iText]], S[iPattern]);
+        iPattern = patSize - 1;
     }
 
     return matches;
